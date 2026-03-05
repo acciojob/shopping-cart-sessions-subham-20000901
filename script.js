@@ -41,7 +41,7 @@ function addToCart(productId) {
 		return p.id === productId;	
 	});
 	cart.push(product);
-	sessionStorage.setItem("cart",JSON.stringify("cart"));
+	sessionStorage.setItem("cart",JSON.stringify(cart));
 	renderCart();
 }
 
@@ -51,7 +51,7 @@ function removeFromCart(productId) {
 	   return item.id!==productId;
    });
 	
-	sessionStorage.setItem("cart",JSON.stringify("cart"));	
+	sessionStorage.setItem("cart",JSON.stringify(cart));	
 	renderCart();
 }
 
